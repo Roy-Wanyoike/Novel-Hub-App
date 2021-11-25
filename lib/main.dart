@@ -2,6 +2,7 @@ import 'package:book_app/consttants.dart';
 import 'package:book_app/screens/home_screen.dart';
 import 'package:book_app/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,12 +28,16 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: new AppBar(
+        centerTitle: true,
+          title: Text('Novel Hub'),
+      ),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/bg.jpg"),
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
         ),
         child: Column(
@@ -43,11 +48,13 @@ class WelcomeScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.display3,
                 children: [
                   TextSpan(
-                    text: "flamin",
+                    text: "NovelHub",
                   ),
                   TextSpan(
-                    text: "go.",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    text: "",
+                    style:
+                    TextStyle(fontWeight: FontWeight.bold),
+
                   ),
                 ],
               ),

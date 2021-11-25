@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mzikky_app/helpers/color.helper.dart';
-import 'package:get/get.dart';
+
 
 class TxtButton extends StatelessWidget {
   final Color textColor;
